@@ -6,8 +6,8 @@ const Header = ({ children }) => {
         <>
             <header>
                 <nav>
-                    <Link to='/' className={styles.link}>Process Mass Val</Link>
-                    <Link to='/graphs' className={styles.link}>Process Graphs</Link>
+                    <Link to='/mass-spec-web-ui/' className={styles.link}>Process Mass Val</Link>
+                    <Link to='/mass-spec-web-ui/graphs' className={styles.link}>Process Graphs</Link>
                 </nav>
             </header>
             {children}
