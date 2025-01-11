@@ -10,15 +10,15 @@ const router = createBrowserRouter([
         element: <Header />,
         children: [
             {
-                path: '/',
+                path: '/mass-spec-web-ui/',
                 element: <ProcessMassValue />
             },
             {
-                path: '/graphs',
+                path: '/mass-spec-web-ui/graphs',
                 element: <Graphs />
             },
             {
-                path: '/about',
+                path: '/mass-spec-web-ui/about',
                 element: <About />
             }
         ]
