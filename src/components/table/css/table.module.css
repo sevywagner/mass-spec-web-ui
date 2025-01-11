@@ -1,0 +1,20 @@
+.item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.table {
+    width: 45vh;
+    margin: 5vh;
+    padding-left: 5vh;
+    padding-right: 5vh;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    border: 1px solid black;
+}
