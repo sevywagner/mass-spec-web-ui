@@ -6,7 +6,7 @@ import About from "../pages/About";
 
 const router = createBrowserRouter([
     {
-        path: '/',
+        path: '/mass-spec-web-ui',
         element: <Header />,
         children: [
             {
