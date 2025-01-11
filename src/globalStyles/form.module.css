@@ -13,6 +13,10 @@
     color: white;
 }
 
+.error {
+    color: red;
+}
+
 @keyframes hover {
     0% {
         border: 1px solid black;

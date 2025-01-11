@@ -13,10 +13,13 @@ const ProcessMassValue = () => {
     const [simpleMode, setSimpleMode] = useState(false)
     const [criMode, setCriMode] = useState(false)
     const [showResults, setShowResults] = useState(false);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(false);
     const massRef = useRef(null);
 
     const submitHandler = (e) => {
         e.preventDefault();
+        setLoading(true);
 
         fetch('https://mass-spec-ai.onrender.com/', {
             method: 'POST',
@@ -34,8 +37,11 @@ const ProcessMassValue = () => {
             setCriComp(data.criCheckComp);
             setCriScore(data.criCheckScore)
             setShowResults(true);
+            setLoading(false)
         }).catch((err) => {
             console.log(err);
+            setError(true);
+            setLoading(false);
         })
     }
 
@@ -61,6 +67,14 @@ const ProcessMassValue = () => {
                     <input type='type' placeholder='0.00' name='mass' ref={massRef}/>
                     <button type='submit'>Get Predictions</button>
                 </form>
+            </div>}
+
+            {error && <div className={wrapperStyles.center}>
+                <p className={formStyles.error}>An error occurred. Please try again.</p>    
+            </div>}
+
+            {loading && <div className={wrapperStyles.center}>
+                <p>Loading...</p>    
             </div>}
 
             {showResults && <div className={wrapperStyles.center}>
