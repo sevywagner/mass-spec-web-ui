@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/mass-spec-web-ui/static/css/main.c47dd8e5.css",
-    "main.js": "/mass-spec-web-ui/static/js/main.e816f079.js",
+    "main.css": "/mass-spec-web-ui/static/css/main.0a2c1d19.css",
+    "main.js": "/mass-spec-web-ui/static/js/main.3b58a88d.js",
     "static/media/a.jpg": "/mass-spec-web-ui/static/media/a.b94b4c0cec0a4e603c54.jpg",
     "static/media/b.gif": "/mass-spec-web-ui/static/media/b.16736247b2e2871a0927.gif",
     "index.html": "/mass-spec-web-ui/index.html",
-    "main.c47dd8e5.css.map": "/mass-spec-web-ui/static/css/main.c47dd8e5.css.map",
-    "main.e816f079.js.map": "/mass-spec-web-ui/static/js/main.e816f079.js.map"
+    "main.0a2c1d19.css.map": "/mass-spec-web-ui/static/css/main.0a2c1d19.css.map",
+    "main.3b58a88d.js.map": "/mass-spec-web-ui/static/js/main.3b58a88d.js.map"
   },
   "entrypoints": [
-    "static/css/main.c47dd8e5.css",
-    "static/js/main.e816f079.js"
+    "static/css/main.0a2c1d19.css",
+    "static/js/main.3b58a88d.js"
   ]
 }
