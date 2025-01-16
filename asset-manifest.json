@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/mass-spec-web-ui/static/css/main.0a2c1d19.css",
-    "main.js": "/mass-spec-web-ui/static/js/main.1fe65313.js",
+    "main.js": "/mass-spec-web-ui/static/js/main.174cfb50.js",
     "static/media/a.jpg": "/mass-spec-web-ui/static/media/a.b94b4c0cec0a4e603c54.jpg",
     "static/media/b.gif": "/mass-spec-web-ui/static/media/b.16736247b2e2871a0927.gif",
     "index.html": "/mass-spec-web-ui/index.html",
     "main.0a2c1d19.css.map": "/mass-spec-web-ui/static/css/main.0a2c1d19.css.map",
-    "main.1fe65313.js.map": "/mass-spec-web-ui/static/js/main.1fe65313.js.map"
+    "main.174cfb50.js.map": "/mass-spec-web-ui/static/js/main.174cfb50.js.map"
   },
   "entrypoints": [
     "static/css/main.0a2c1d19.css",
-    "static/js/main.1fe65313.js"
+    "static/js/main.174cfb50.js"
   ]
 }
