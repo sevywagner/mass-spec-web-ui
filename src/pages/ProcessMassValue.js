@@ -31,7 +31,7 @@ const ProcessMassValue = () => {
         e.preventDefault();
         setLoading(true);
 
-        fetch('https://mass-spec-ai.onrender.com/mass-val', {
+        fetch('http://127.0.0.1:8080/mass-val', {
             method: 'POST',
             mode: 'cors',
             body: JSON.stringify({
@@ -66,7 +66,7 @@ const ProcessMassValue = () => {
 
     const doesPassCrit = (a, b) => {
         for (let i = 0; i < a.length; i++) {
-            if (a[i] === 1 && b[i] === 0) {
+            if (a[i] == 1 && b[i] == 0) {
                 return false;
             }
         }
