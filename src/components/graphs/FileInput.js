@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { LineChart } from "@mui/x-charts";
 import styles from './file.module.css'
 
 const FileInput = ({ onSubmit }) => {

@@ -1,17 +1,19 @@
-import { useState } from 'react';
 import styles from './css/table.module.css';
+import wrapperStyles from '../../globalStyles/wrappers.module.css'
 import TableItem from './TableItem';
 
-const PredTable = ({ compounds, preds }) => {
+const PredTable = ({ compounds, preds, ppms }) => {
     return (
-        <>
-            <div className={styles.wrapper}>
-                <div className={styles.table}>
-                    <TableItem compound="Compounds" pred="Confidence" />
-                    {compounds.map((c, idx) => <TableItem compound={c} pred={preds[idx]} />)}
-                </div>
-            </div>
-        </>
+        <div className={wrapperStyles.center}>
+            <table border='true' className={styles.table}>
+                <tr>
+                    <th>Prediction</th>
+                    <th>Confidence</th>
+                    <th>PPM</th>
+                </tr>
+                {compounds.map((c, idx) => <TableItem key={Math.random()} compound={c} pred={preds[idx]} ppm={ppms[idx]} />)}
+            </table>
+        </div>
     );
 }
 

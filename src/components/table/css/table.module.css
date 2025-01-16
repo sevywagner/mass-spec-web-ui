@@ -10,11 +10,24 @@
 }
 
 .table {
-    width: 45vh;
+    width: 65vh;
     margin: 5vh;
-    padding-left: 5vh;
-    padding-right: 5vh;
-    padding-top: 2vh;
-    padding-bottom: 2vh;
-    border: 1px solid black;
+    padding: 3vh;
+    background-color: whitesmoke;
+    border-radius: 2vh;
+    color: black;
+}
+
+.table tr th {
+    width: 10vh;
+    padding-top: 1.5vh;
+    padding-bottom: 1.5vh;
+    font-size: 2.4vh;
+}
+
+
+.table td {
+    text-align: center;
+    padding-top: .7vh;
+    padding-bottom: .7vh;
 }

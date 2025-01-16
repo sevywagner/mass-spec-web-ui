@@ -15,7 +15,7 @@ const Graphs = () => {
     //     form.append('av', av);
     //     form.append('base', base);
 
-    //     fetch('https://mass-spec-ai.onrender.com/graph-upload', {
+    //     fetch('http://127.0.0.1:8080/graph-upload', {
     //         method: 'POST',
     //         body: form
     //     }).then((res) => {
@@ -40,7 +40,7 @@ const Graphs = () => {
 
     // const predict = () => {
     //     setLoading(true);
-    //     fetch('https://mass-spec-ai.onrender.com/predict', {
+    //     fetch('http://127.0.0.1:8080/predict', {
     //         method: 'GET'
     //     }).then((res) => {
     //         return res.text();

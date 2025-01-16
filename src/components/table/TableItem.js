@@ -1,11 +1,10 @@
-import styles from './css/table.module.css';
-
-const TableItem = ({ compound, pred }) => {
+const TableItem = ({ compound, pred, ppm }) => {
     return (
-        <div className={styles.item}>
-            <p>{compound}</p>
-            <p>{pred}</p>
-        </div>
+        <tr>
+            <td>{compound}</td>
+            <td>{pred}%</td>
+            <td>{ppm}</td>
+        </tr>
     );
 }
 
