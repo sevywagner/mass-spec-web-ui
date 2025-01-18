@@ -31,3 +31,45 @@
     padding-top: .7vh;
     padding-bottom: .7vh;
 }
+
+.center {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    margin: 2vh;
+}
+
+.center a {
+    text-align: center;
+    margin: 2vh;
+}
+
+.save {
+    /* margin: 2vh; */
+    border: 1px solid white;
+    background-color: white;
+    padding: 2vh;
+    border-radius: 3vh;
+    font-size: 2.4vh;
+}
+
+.save:hover {
+    animation: hover .3s ease-in-out;
+    border: 1px solid white;
+    background-color: black;
+    color: white;
+}
+
+@keyframes hover {
+    0% {
+        border: 1px solid white;
+        background-color: white;
+        color: black;
+    }
+
+    100% {
+        border: 1px solid white;
+        background-color: black;
+        color: white;
+    }
+}

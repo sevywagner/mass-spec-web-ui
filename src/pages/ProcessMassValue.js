@@ -31,9 +31,8 @@ const ProcessMassValue = () => {
         e.preventDefault();
         setLoading(true);
 
-        fetch('https://mass-spec-ai.onrender.com/mass-val', {
+        fetch('http://127.0.0.1:8080/mass-val', {
             method: 'POST',
-            mode: 'cors',
             body: JSON.stringify({
                 massVal: massRef.current.value
             }),
@@ -140,34 +139,39 @@ const ProcessMassValue = () => {
                 <button className={formStyles.back} onClick={showFormHandler}>Go Back</button>    
             </div>}
 
-            {showResults && <div className={styles.checkboxes}>
-                <div>
-                    <input type='checkbox' checked={simpleMode} onChange={(e) => { setSimpleMode((prevState) => !prevState) }} />
-                    <label>Polyatomics</label>
-                </div>
-                
-                <div>
-                    <input type='checkbox' checked={cri1} onChange={(e) => { setCr1((prevState) => !prevState) }} />
-                    <label>Cri 1</label>
+            {showResults && <div className={styles['table-wrap']}>
+                <div className={styles['check-wrap']}>
+                    <div className={styles.checkboxes}>
+                        <div>
+                            <input type='checkbox' checked={simpleMode} onChange={(e) => { setSimpleMode((prevState) => !prevState) }} />
+                            <label>Polyatomics</label>
+                        </div>
+                        
+                        <div>
+                            <input type='checkbox' checked={cri1} onChange={(e) => { setCr1((prevState) => !prevState) }} />
+                            <label>Even number of hydrogen in compounds with (NH4)</label>
+                        </div>
+
+                        <div>
+                            <input type='checkbox' checked={cri2} onChange={(e) => { setCr2((prevState) => !prevState) }} />
+                            <label>Hydrogen {"<="} ((2 * (# of Carbon)) + 2) in compounds with (NH4)</label>
+                        </div>
+
+                        <div>
+                            <input type='checkbox' checked={cri3} onChange={(e) => { setCr3((prevState) => !prevState) }} />
+                            <label>Odd number of Hydrogen in compounds with only Carbon, Hydrogen, and Oxygen</label>
+                        </div>
+                        
+                        <div>
+                            <input type='checkbox' checked={cri4} onChange={(e) => { setCr4((prevState) => !prevState) }} />
+                            <label>Hydrogen {"<="} ((2 * (# of Carbon)) + 3) in compounds with only Carbon, Hydrogen, and Oxygen</label>
+                        </div>
+                    </div>
                 </div>
 
-                <div>
-                    <input type='checkbox' checked={cri2} onChange={(e) => { setCr2((prevState) => !prevState) }} />
-                    <label>Cri 2</label>
-                </div>
-
-                <div>
-                    <input type='checkbox' checked={cri3} onChange={(e) => { setCr3((prevState) => !prevState) }} />
-                    <label>Cri 3</label>
-                </div>
-                
-                <div>
-                    <input type='checkbox' checked={cri4} onChange={(e) => { setCr4((prevState) => !prevState) }} />
-                    <label>Cri 4</label>
-                </div>
+                <PredTable compounds={compDisplay} preds={predDisplay} ppms={PPMDisplay} />
             </div>}
 
-            {showResults && <PredTable compounds={compDisplay} preds={predDisplay} ppms={PPMDisplay} />}
         </div>
     );
 }
