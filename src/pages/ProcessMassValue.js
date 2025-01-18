@@ -31,7 +31,7 @@ const ProcessMassValue = () => {
         e.preventDefault();
         setLoading(true);
 
-        fetch('http://127.0.0.1:8080/mass-val', {
+        fetch('https://mass-spec-ai.onrender.com/mass-val', {
             method: 'POST',
             body: JSON.stringify({
                 massVal: massRef.current.value

@@ -7,7 +7,7 @@ const PredTable = ({ compounds, preds, ppms }) => {
     const [downloadLink, setDownloadLink] = useState();
 
     const downloadHandler = () => {
-        fetch('http://127.0.0.1:8080/download-table', {
+        fetch('https://mass-spec-ai.onrender.com/download-table', {
             method: 'POST',
             body: JSON.stringify({
                 compounds,
